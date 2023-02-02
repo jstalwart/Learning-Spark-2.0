@@ -16,8 +16,11 @@ spark = (SparkSession.builder
 # Recuperar el path del fichero
 quijote_file = sys.argv[1]
 
-quijote_df = (spark.read
+quijote_string = (spark.read
                 .text(quijote_file))
+
+# Contador
+print("Contador:", quijote_string.count())
 
 spark.stop()
 
