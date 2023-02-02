@@ -26,7 +26,11 @@ print("Contador: ", quijote_string.count())
 # El método show muestra por la consola de comandos las n primeras líneas del documento
 # n es el número de líneas que muestra
 # truncate indica si se corta la línea o si se muestra entera
-quijote_string.show(n=2, truncate=False)
+#quijote_string.show(n=2, truncate=False)
+
+# El método head devuelve las n primeras filas
+# En texto devuelve una lista con las filas leídas 
+print((quijote_string.head(10)))
 
 
 
