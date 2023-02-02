@@ -21,18 +21,19 @@ quijote_file = sys.argv[1]
 quijote_string = (spark.read
                 .text(quijote_file))
 
-print("Contador: ", quijote_string.count())
+# El método count cuenta el número de filas del documento
+#print("Contador: ", quijote_string.count())
 
 # El método show muestra por la consola de comandos las n primeras líneas del documento
-# n es el número de líneas que muestra
+# n es el número de líneas que muestra. Si no tiene valor devuelve las 20 primeras filas
 # truncate indica si se corta la línea o si se muestra entera
-#quijote_string.show(n=2, truncate=False)
+#quijote_string.show(n = 2, truncate=False)
 
 # El método head devuelve las n primeras filas
 # En texto devuelve una lista con las filas leídas 
-print((quijote_string.head(10)))
+#print((quijote_string.head(10)))
 
-
+print(quijote_string.take(2))
 
 spark.stop()
 
