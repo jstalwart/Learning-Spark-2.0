@@ -33,7 +33,12 @@ quijote_string = (spark.read
 # En texto devuelve una lista con las filas leídas 
 #print((quijote_string.head(10)))
 
-print(quijote_string.take(2))
+# El método take hace lo mismo que el método head, pero almacenando los valores en una lista de filas, indicando pues todas
+# las variables de dicha fila. 
+#print(quijote_string.take(2))
+
+# El método first devuelve la primera fila del dataframe, indicanod todas las variables de dicha fila
+print(quijote_string.first())
 
 spark.stop()
 
