@@ -5,6 +5,7 @@ import sys
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import count
 
+# Fefinimos los parámetros de entrada
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: mnmcount <file>", file=sys.stderr)
